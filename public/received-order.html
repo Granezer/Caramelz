@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Onoh Michael / Abdulwarith" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/e7050caec1.js" crossorigin="anonymous"></script>
+    <title>Caramel | Landing Page</title>
+
+    <!--favicon-->
+    <link rel="icon" href="images/favicon.png" />
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;family=Open+Sans:ital@0;1&amp;display=swap" rel="stylesheet">
+
+    <!--css files-->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+    <link rel="stylesheet" href="css/flaticon.css"/>
+    <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="css/owl.theme.default.min.css"/>
+    <link rel="stylesheet" href="css/magnific-popup.css"/>
+    <link rel="stylesheet" href="css/select2.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/product-gallery.css"/>
+    <script src="js/axios.js" defer></script>
+</head>
+<body>
+    <div>
+    <!--Navbar Header-->
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <nav class="navbar navbar-expand-xl navbar-light">
+                        <div class="container-fluid">
+                            <a href="/" class="navbar-brand"><h4>Caramel</h4></a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                                <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <div class="collapse navbar-collapse" id="mynavbar">
+                                <ul class="navbar-nav mx-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about-us.html">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Contact Us</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Shop
+                                        </a>
+                                           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="product-gallery.html?category=supplement">Supplement</a></li>
+                                            <li><a class="dropdown-item" href="product-gallery.html?category=daily consummable">Daily Consumable</a></li>
+                                            <li><a class="dropdown-item" href="product-gallery.html?category=hardware">HardWare</a></li>
+                                            <li><a class="dropdown-item" href="product-gallery.html?category=makeup">Make Up</a></li>
+                                            <li><a class="dropdown-item" href="product-gallery.html?category=hair">Hair</a></li>
+                                            <li><a class="dropdown-item" href="product-gallery.html?category=food">Food</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!--<form class="d-flex">
+                                  <input class="me-2" type="text" placeholder="Search">
+                                  <button class="btn btn-primary" type="button">Search</button>
+                                </form>-->
+                                <!--<button type="button" class="btn btn-link"><a href="signup.html">Sign In</a></button>-->
+                                
+                              </div>
+                        </div>
+                    </nav>
+                </div>
+    
+                <div class="col-lg-4 col-md-3">
+                    <div class="header-search mt-2">
+                        <div class="search-form">
+                            <form method="get">
+                                <div class="input-group">
+                                    <div class="select-style">
+                                        <select name="order">
+                                            <option class="topshow" value="1">All</option>
+                                            <option value="a">Beer</option>
+                                            <option value="b">Wine</option>
+                                            <option value="c">Liquor</option>
+                                            <option value="d">Cider</option>
+                                            <option value="e">Mead</option>
+                                            <option value="f">Others</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" name="search" id="search" class="form-control" placeholder="Search Here" />
+                                    <div class="input-group-addon">
+                                        <button type="submit"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+    
+                <!--<div class="col-lg-2 col-md-3 cart-login">
+                    <div class="float-end cart mt-2">
+                        <a href="#">
+                            <!--<span class="number">10</span>--
+                            <i class="fa-solid fa-cart-plus"></i>
+                            <span>Cart</span>
+                        </a>
+                    </div>-->
+    
+                    <!--<div class="float-end">
+                        <button type="button" class="btn btn-light mt-2 btn-sm">Login</button>
+                    </div>-->
+                </div>
+    
+                <div class="col-12 mt-sm-2 mt-lg-0">
+                    <div class="store-location p-0 text-end">
+                        <div class="form-check-inline">
+                            <input type="radio" id="test1" name="radio-group" data-toggle="modal" data-target=".bd-example-modal-lg" />
+                            <label for="test1">Choose a Store</label>
+                        </div>
+    
+                        <div class="form-check-inline">
+                            <i class="fa-brands fa-microblog"></i>
+                        </div>
+    
+                        <div class="form-check-inline">
+                            <input type="radio" id="test2" name="radio-group" data-toggle="modal" data-target=".bd-example-modal-lg1" />
+                            <label for="test2">Show Local Availblity</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Navbar Header end-->
+    <br>
+    <hr>
+    <br>
+    <h3><b class="d-flex justify-content-center align-items-center">Ordered Received</b></h3>
+    <br>
+    <h5 class="d-flex justify-content-center align-items-center">Thank you, your order has been received.</h5>
+    <br>
+
+    <!--Order table-->
+    <div class="container mt-3">
+    <table class="table table-white table-striped">
+        <thead>
+          <tr>
+            <th>ORDER ID:</th>
+            <th>DATE:</th>
+            <th>TOTAL:</th>
+            <th>PAYMENT METHOD:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="Oid">11474</td>
+            <td id="date">August 20, 2022</td>
+            <!-- <td id="total">₦15.00</td> -->
+            <td id="totalprice">2000</td>
+            <td id="Pmethod">Direct bank transfer</td>
+          </tr>
+          <!-- <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr> -->
+        </tbody>
+      </table>
+      </div>
+      <hr>
+      <br>
+      <br>
+    <h4><b class="d-flex justify-content-center align-items-center">Our Bank Details</b></h4>
+    <br>
+    <h5 class="d-flex justify-content-center align-items-center">Caramel Health Ltd</h5>
+    <br>
+    <div class="container mt-3" id="payWrapper">
+        <!-- <table class="table table-white table-striped">
+            <thead>
+              <tr>
+                <th>Bank:</th>
+                <th>Acount Number:</th>
+          
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>First Bank</td>
+                <td>3122914303</td>
+             
+              </tr>
+         
+            </tbody>
+          </table> -->
+          <form id="paymentForm">
+
+          </form>
+          </div>
+          <br>
+          <br>
+          <!--Order Details-->
+    <h4><b class="d-flex justify-content-center align-items-center">Ordered products</b></h4>
+
+    <div class="container mt-3">
+        <table class="table table-white table-striped">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody id="ordered_product"></tbody>
+          </table>
+          </div>
+
+
+
+
+
+
+
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>Company name
+            </h6>
+            <p>
+              Here you can use rows and columns to organize your footer content. Lorem ipsum
+              dolor sit amet, consectetur adipisicing elit.
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Products
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Angular</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">React</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Vue</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Laravel</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+              Useful links
+            </h6>
+            <p>
+              <a href="#!" class="text-reset">Pricing</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Settings</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Orders</a>
+            </p>
+            <p>
+              <a href="#!" class="text-reset">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              info@example.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2021 Copyright:
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+   <!-- paystack script  -->
+    <script src="https://js.paystack.co/v1/inline.js"></script> 
+      <!--<script src="js/product-gallery.js"></script>-->
+          <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+   
+</body>
+</html>

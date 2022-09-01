@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Caramel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<script src="js/about.js" defer></script>
+</head>
+<body>
+  <section class="aboutSection">
+    <div class="headerLinks">
+    <div class="links">
+        <a href="index.html">Home         &rightarrow;</a>
+
+        <a href="about-us.html">About Us         &rightarrow;</a>
+        <span id="link"></span>
+    </div>
+    
+        <h2 class="about-title" id="title"></h2>
+    </div>
+
+    <div class="aboutWrapper">
+        <ul class="aboutLinks">
+                <li class="btn active" id="company">Company Overview</li>
+                <li id="executive" class="btn inactive">Executive Team</li>
+                <li class="btn inactive" id="culture">Culture & Values</li>
+                <li class="btn inactive">Our Other Businesses</li>
+        </ul>
+        
+        <div class="aboutBody" id="about-wrap"></div>
+        <div class="lds-dual-ring" id="preloader"></div>
+    </div>
+  </section>
+
+  <!-- templates for each contents of about us -->
+
+  <template id="company-overview">
+    <div class="companyImgWrapper">
+        <img src="images/company_overview.webp" alt="Company Image" class="companyImg">
+    </div>
+    <div class="body-text">
+        <div class="txt-title">Company Overview</div>
+        <p class="txt">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias quaerat autem impedit voluptatum atque placeat cupiditate? Rem sunt esse excepturi.
+        </p>
+        <br>
+        <p class="txt">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias quaerat autem impedit voluptatum atque placeat cupiditate? Rem sunt esse excepturi.
+        </p>
+        <br>
+        <p class="txt">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias quaerat autem impedit voluptatum atque placeat cupiditate? Rem sunt esse excepturi.
+        </p>
+        <br>
+        <p class="txt">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias quaerat autem impedit voluptatum atque placeat cupiditate? Rem sunt esse excepturi.
+        </p>
+        <br>
+        <p class="txt">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias quaerat autem impedit voluptatum atque placeat cupiditate? Rem sunt esse excepturi.
+        </p>
+        <br>
+        <p class="txt">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </p>
+    </div>
+  </template>
+
+  <template id="exect-team"> 
+        <div class="execTeam">
+            <div class="ceo">
+                <img src="images/happy woman.jpg" alt="ceo-image" class="ceoImg">
+                <p class="name">Abdulwahab Abdulwarith Gbolahan</p>
+                <p class="position">CEO / Founding father</p>
+            </div>
+            <div class="co-ceo-wrap">
+                <div class="co-ceo">
+                <img src="images/happy woman.jpg" alt="ceo-image" class="ceoImg">
+                <p class="name">Abdulwahab Abdulwarith Gbolahan</p>
+                <p class="position">CEO / Founding father</p>
+                </div>
+
+                <div class="co-ceo">
+                <img src="images/happy woman.jpg" alt="ceo-image" class="ceoImg">
+                <p class="name">Abdulwahab Abdulwarith Gbolahan</p>
+                <p class="position">CEO / Founding father</p>
+                </div>
+            </div>
+        </div>
+  </template>
+
+
+  <template id="culture-temp">
+    <div class="culture-wrap">
+        <div class="culture-element">
+                <p class="name">Our mission</p>
+                <div class="element-wrap">
+                    <div class="element">
+                        <img src="images/mission.webp" alt="Our Mission" class="img">
+                    <p class="position">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+               
+            </div>
+        <div class="culture-element">
+            <p class="name">Our vision</p>
+            <div class="element-wrap">
+                <div class="element">
+                    <img src="images/vision.webp" alt="Our vision" class="img">
+                    <p class="position">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, iure?</p>
+                </div>
+                <div class="element">
+                    <img src="images/vision.webp" alt="Our vision" class="img">
+                    <p class="position">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, iure?</p>
+                </div>
+                <div class="element">
+                    <img src="images/vision.webp" alt="Our vision" class="img">
+                    <p class="position">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, iure?</p>
+                </div>
+            </div>
+          
+
+        </div>
+        <div class="culture-element">
+            <p class="name">Our value</p>
+            <div class="element-wrap">
+                <div class="element">
+                    <img src="images/values.webp" alt="Our values" class="img">
+                    <p class="position">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia alias dignissimos nulla!</p>
+                </div>
+                <div class="element">
+                    <img src="images/values.webp" alt="Our values" class="img">
+                    <p class="position">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia alias dignissimos nulla!</p>
+                </div>
+                <div class="element">
+                    <img src="images/values.webp" alt="Our values" class="img">
+                    <p class="position">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia alias dignissimos nulla!</p>
+                </div>
+                <div class="element">
+                    <img src="images/values.webp" alt="Our values" class="img">
+                    <p class="position">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia alias dignissimos nulla!</p>
+                </div>
+                <div class="element">
+                    <img src="images/values.webp" alt="Our values" class="img">
+                    <p class="position">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia alias dignissimos nulla!</p>
+                </div>
+                <div class="element">
+                    <img src="images/values.webp" alt="Our values" class="img">
+                    <p class="position">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia alias dignissimos nulla!</p>
+                </div>
+            </div>
+        
+     
+        </div>
+    </div>
+  </template>
+</body>
+</html>
