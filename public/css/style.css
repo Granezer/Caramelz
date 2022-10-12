@@ -860,7 +860,7 @@ header>[type="radio"]:not(:checked)+label {
 }
 
 .pWrapper>.image {
-    width: 80%;
+    width: 100%;
     height: 80vh;
     border-radius: 0.8em;
     transition: transform 1s ease-in-out;
