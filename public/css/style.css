@@ -463,10 +463,11 @@
 }
 
 .ceoImg {
-    width: 10em;
-    height: 10em;
+    width: 230px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 0.5em;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.609),
+    box-shadow: 3px 3px 5px rgba(36, 35, 35, 0.609),
         -3px -3px 5px rgba(0, 0, 0, 0.609);
 }
 
