@@ -1063,7 +1063,7 @@ header>[type="radio"]:not(:checked)+label {
     }
 
     .culture-wrap::before {
-        content: 'Culture & Values';
+        /* content: 'Culture & Values'; */
         width: 96%;
         font-size: 1.5em;
         font-family: 'Poppins', sans-serif;
